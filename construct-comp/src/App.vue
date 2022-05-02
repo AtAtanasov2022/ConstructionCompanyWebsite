@@ -1,15 +1,55 @@
 <template>
-  <div class="nav">
-    <div class="space"></div>
-    <button class="button-21" role="button">Home</button>
-    <button class="button-21" role="button">Projects</button>
-    <button class="button-21" role="button">About us</button>
-    <button class="button-21" role="button">Contact page</button>
+  <div>
+    <div class="nav">
+      <div class="space"></div>
+      <button class="button-21" role="button">Home</button>
+      <button class="button-21" role="button">Projects</button>
+      <button class="button-21" role="button">About us</button>
+      <button class="button-21" role="button">Contact page</button>
+    </div>
+
+    <div class="image1">
+      <img>
+    </div>
+
+    <div class="image2">
+      <img>
+    </div>
+
+    <div class="mainText">
+      <h1>Welcome to the page of Company</h1>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      home: true,
+      projects: false,
+      aboutUs: false,
+      contactPage: false
+    };
+  },
+
+  methods: {
+    changeStateHome() {
+      this.home = !this.home;
+    },
+
+    changeStateProjects() {
+      this.projects = !this.projects;
+    },
+
+    changeStateAboutUs() {
+      this.aboutUs = !this.aboutUs;
+    },
+
+    changeStateContactPage() {
+      this.contactPage = !this.contactPage;
+    }
+  }
   
 }
 </script>
@@ -25,6 +65,42 @@ export default {
     width: 50%;
     height: 50px;
     margin-left: 25%;
+    margin-top: 1.5%
+  }
+
+  .image1 {
+    margin-left: 5%;
+    margin-top: 2.5%;
+    border-style: solid;
+    border-width: 0.01cm;
+    border-radius: 25px;
+    width: 15%;
+    height: 800px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+
+  .image2 {
+    margin-left: 80%;
+    margin-top: -42%;
+    border-style: solid;
+    border-width: 0.01cm;
+    border-radius: 25px;
+    width: 15%;
+    height: 800px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+
+  .mainText {
+    margin-left: 25%;
+    margin-top: -42.5%;
+    border-style: solid;
+    border-width: 0.01cm;
+    border-radius: 25px;
+    width: 50%;
+    height: 1000px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    text-align: center;
+    background-color: lightgoldenrodyellow;
   }
 
   .space {
